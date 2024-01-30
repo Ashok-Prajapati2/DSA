@@ -6,7 +6,7 @@ int main()
     int *x = (int *)malloc(sizeof(int));
 
     *x = 5;
-    printf("%d", *x);
+    printf("\n %d \n", *x);
 
     free(x);
 
