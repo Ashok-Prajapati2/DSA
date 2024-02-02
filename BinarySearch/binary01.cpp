@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-;
+
 int main()
 {
     int myarr[] = {4, 5, 7, 9, 12, 18, 45, 56, 89};
