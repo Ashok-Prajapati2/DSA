@@ -13,25 +13,12 @@ struct node *CreateNode()
 {
     struct node *k = (struct node *)malloc(sizeof(struct node));
     printf("Enter data : ");
-    scanf("%d",&k->data);
+    scanf("%d", &k->data);
 
     k->next = 0;
 
     return k;
 }
-void insertAtStart()
-{
-    struct node *k = CreateNode();
-    if (start == 0)
-    {
-        start = k;
-    }
-    else
-    {
-        k->next = start;
-        start = k;
-    }
-};
 
 void insert()
 {
@@ -39,7 +26,7 @@ void insert()
 
     if (start == 0)
     {
-        q = start;
+        start = q;
     }
     else
     {
@@ -47,16 +34,27 @@ void insert()
         printf("Enter data where you want to insert : ");
         scanf("%d", &d);
 
-        struct node *w, *a;
-        w = start;
-        while (w->next->data != d)
+        if (start->next == 0 || start->data == d)
         {
-            w = w->next;
-        }
 
-        a = w->next;
-        w->next = q;
-        q->next = a;
+            q->next = start;
+            start = q;
+        }
+        else
+        {
+
+            struct node *w, *a;
+            w = start;
+
+            while (w->next->data != d)
+            {
+                w = w->next;
+            }
+
+            a = w->next;
+            w->next = q;
+            q->next = a;
+        }
     }
 }
 
@@ -68,7 +66,6 @@ void Display()
         printf("%d ", q->data);
         q = q->next;
     }
-
 }
 int main()
 {
@@ -76,7 +73,7 @@ int main()
     {
         int ch;
         printf("Enter ch : ");
-        scanf("%d",&ch);
+        scanf("%d", &ch);
 
         switch (ch)
         {
@@ -87,12 +84,6 @@ int main()
             Display();
             break;
 
-        case 3:
-            insertAtStart();
-            break;
-        case 4:
-            Display();
-            break;
         default:
             break;
         }
