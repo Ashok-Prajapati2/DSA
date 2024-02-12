@@ -1,31 +1,43 @@
 #include "createnode.cpp"
 #include "insertatlast.cpp"
 #include "insertatstart.cpp"
-#include "insertatlast.cpp"
+#include "insertatmiddle.cpp"
 #include "deleteatmiddle.cpp"
 #include "deleteatstart.cpp"
 #include "deleteatend.cpp"
 
 void Display()
 {
+
     struct node *q = start;
-    int i = 0;
+    int m = 0, i = 0;
+    while (q != nullptr)
+    {
+        i++;
+        q = q->next;
+    }
     int myarr[i] = {};
-    cout << "Start : " << start << endl;
+
+    q = start;
+    cout << "\n\nStart : " << start << endl << endl;
+
     while (q != 0)
     {
+        cout << "   ⇵\n";
+        cout << "_________________________________\n";
+        cout << "|  perv : " << q->perv << "\n";
+        cout << "|  data : " << q->data << "\n";
+        cout << "|  next : " << q->next << "\n";
+        cout << "_________________________________\n\n";
+        myarr[m] = q->data;
+        m++;
 
-        cout << "data : " << q->data << "\n";
-        cout << "perv : " << q->perv << "\n";
-        cout << "next : " << q->next << "\n";
-        myarr[i] = q->data;
-
-        i++;
         q = q->next;
     }
 
     cout << "\nData : ";
-    for (int j = 0; j < i; ++j)
+
+    for (int j = 0; j < m; ++j)
     {
         cout << myarr[j] << " ";
     }

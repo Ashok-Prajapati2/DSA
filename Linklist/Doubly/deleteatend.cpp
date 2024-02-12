@@ -1,4 +1,6 @@
-#ifndef CREATENODE_H
-#define CREATENODE_H
-
+#ifndef DELETEATEND_H
+#define DELETEATEND_H
+void deleteatend()
+{
+}
 #endif
