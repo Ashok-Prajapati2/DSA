@@ -1,5 +1,7 @@
 #ifndef DELETEATMIDDLE_H
 #define DELETEATMIDDLE_H
+#include "createnode.cpp"
+
 void deleteatmiddle()
 {
     struct node *p, *w = start;
