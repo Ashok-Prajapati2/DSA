@@ -1,5 +1,6 @@
 #ifndef DELETEATEND_H
 #define DELETEATEND_H
+#include "createnode.cpp"
 void deleteatend()
 {
     struct node *r , *w = start;
