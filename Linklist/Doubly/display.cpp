@@ -74,23 +74,21 @@ int main()
     cout << "\n\nThis program allows you to interact with a linked list, a data structure that stores elements in a linear sequence. You can perform various operations like inserting, deleting, and viewing the elements in the list.\n\n\n";
     int choice;
     bool running = true;
-    
+
     while (running)
     {
-    cout << "\n\nMenu:" << endl;
-    cout << "1. Insert" << endl;
-    cout << "2. Delete" << endl;
-    cout << "3. Display" << endl;
-    cout << "4. Exit "  << endl;
+        cout << "\n\nMenu:" << endl;
+        cout << "1. Insert" << endl;
+        cout << "2. Delete" << endl;
+        cout << "3. Display" << endl;
+        cout << "4. Exit " << endl;
 
-    
+        cout << "\nEnter your choice(1,2,3,4): ";
+        cin >> choice;
 
-    cout << "\nEnter your choice(1,2,3,4): ";
-    cin >> choice;
-
-    switch (choice)
-    {
-    case 1:
+        switch (choice)
+        {
+        case 1:
             cout << "\n";
             insertMenu();
             cout << "\nEnter your choice for Insert : ";
@@ -110,7 +108,7 @@ int main()
                 cout << "Invalid choice for insertion." << endl;
             }
             break;
-    case 2:
+        case 2:
             cout << "\n";
             deleteMenu();
             cout << "\nEnter your choice for Delete: ";
