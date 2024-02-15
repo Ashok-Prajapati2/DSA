@@ -10,5 +10,8 @@
         "valarray": "c",
         "iostream": "cpp",
         "ostream": "cpp"
-    }
+    },
+    "C_Cpp.formatting": "vcFormat",
+    "C_Cpp.vcFormat.indent.accessSpecifiers": true,
+    "C_Cpp.vcFormat.indent.braces": true
 }
