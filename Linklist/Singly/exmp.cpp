@@ -19,6 +19,7 @@ int main()
 
     p = (struct node *)malloc(sizeof(struct node));
 
+    start = p;
     p->data = 22;
 
     cout << p->data << " " << start << endl;
